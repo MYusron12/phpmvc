@@ -1,0 +1,52 @@
+SEMANGAT!!!!!!!
+MVC : Model - View - Controller
+
+MVC adalah "Pola arsitektur pada perancangan perangkat lunak berorientasi objek"
+
+MVC bertujuan untuk "Memisahkan antara tampilan, data dan proses".
+
+Data(Model) <=> Proses(Controller) <=> Tampilan(View)
+
+Data(Model) :	- Representasi Pengetahuan
+				- Mengelola Data
+				- Logika Baris
+
+Prose(Controller) :	- Perantara antara model dan view
+					- Menangani pemrosesan pada applikasi
+					- Menangani aksi dari user
+
+Tmpilan(View) :	- Output apa yang dilihat oleh user
+				- Representasi visual dari model
+				- Lapisan presentasi
+				
+
+kenapa Harus belajar MVC
+- Organisasi dan struktur kode
+- Pemisah logic dan tampilan
+- Perawatan kode
+- Implementasi konsep OOP
+- Digunakan oleh web application framework
+
+
+
+
+
+application flow pada code igniter
+
+			-> Routing -> Security 	-> 							<=>Models
+index.php								Application Controller	<=>Libraries
+			<- Caching <- View 		<- 							<=>Helpers
+																<=>Plugins
+																<=>Script
+
+
+
+application flow yang akan dibuat di materi phpmvc
+													<=> Models
+			-> Routing 	->
+index.php 					Application Controller
+			<- View 	<-
+
+
+
+
