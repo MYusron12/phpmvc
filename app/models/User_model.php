@@ -1,9 +1,14 @@
 <?php
 
-class User_model{
+class User_model
+{
+    //variable nama visibility private
     private $nama = 'Yusron';
 
-    public function getUser(){
+    //ambil datanya dengan methtod getUser
+    public function getUser()
+    {
+        //ambil variable namanya
         return $this->nama;
     }
 }
