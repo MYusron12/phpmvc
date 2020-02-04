@@ -50,22 +50,22 @@ class Database
         if (is_null($type)) {
             //lakukan sesuatu, dan jalankan switchnya
             switch (true) {
-                //kalau tipenya integer
+                    //kalau tipenya integer
                 case is_int($value):
                     //set menjadi parameter integer
                     $type = PDO::PARAM_INT;
                     break;
-                //jika boolean
+                    //jika boolean
                 case is_bool($value):
                     //tipenya adalah boolean
                     $type = PDO::PARAM_BOOL;
                     break;
-                //jika valuenya null
+                    //jika valuenya null
                 case is_null($value):
                     //maka tipenya null
                     $type = PDO::PARAM_NULL;
                     break;
-                //jika tipenya default
+                    //jika tipenya default
                 default:
                     //maka tipenya parameter string
                     $type = PDO::PARAM_STR;
@@ -93,5 +93,10 @@ class Database
     {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 }
