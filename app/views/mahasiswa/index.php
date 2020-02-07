@@ -1,4 +1,10 @@
 <div class="container mt-3">
+
+<div class="row">
+<div class="col-lg-6">
+<?php Flasher::flash(); ?>
+</div>
+</div>
     <div class="row">
         <div class="col-6">
             <!-- Button trigger modal -->
@@ -10,10 +16,11 @@
             <!-- //menampilkan data mahasiswa hanya namaya saja -->
             <ul class="list-group">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item ">
                         <?= $mhs['nama']; ?>
                         <!-- lakukan fungsi detail dari data mahasiswa, masuk ke method mahasiswa berdasarkan id-->
-                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary">Detail</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin?');">Hapus</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
