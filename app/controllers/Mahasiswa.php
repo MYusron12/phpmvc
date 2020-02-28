@@ -54,8 +54,10 @@ class Mahasiswa extends Controller
         }
     }
 
+    //method function ubah data 
     public function getubah()
     {
+        //jalankan method yang ada dalam model mahasiswa yg namanya getMahasiswaById dengan mengirimkan id, datanya berupa json
         echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
     }
 
@@ -70,5 +72,14 @@ class Mahasiswa extends Controller
             header('Location: ' . BASEURL . '/mahasiswa');
             exit;
         }
+    }
+
+    public function cari()
+    {
+        $data['judul'] = 'Daftar Mahasiswa';
+        $data['mhs'] = $this->model('Mahasiswa_model')->cariDataMahasiswa();
+        $this->view('templates/header', $data);
+        $this->view('mahasiswa/index', $data);
+        $this->view('templates/footer');
     }
 }
