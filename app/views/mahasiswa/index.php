@@ -72,7 +72,7 @@
                     <div class="form-group">
                         <label for="jurusan">Jurusan</label>
                         <select class="form-control" id="jurusan" name="jurusan">
-                            <option value="Teknik Informatika">Teknik Infromasika</option>
+                            <option value="Teknik Informatika">Teknik Infromatika</option>
                             <option value="Teknik Industri">Teknik Industri</option>
                             <option value="Teknik Komputer">Teknik Komputer</option>
                         </select>
